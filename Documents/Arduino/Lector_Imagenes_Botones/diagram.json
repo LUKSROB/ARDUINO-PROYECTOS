@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 127.15, "left": -88.43, "attrs": {} },
+    {
+      "type": "wokwi-microsd-card",
+      "id": "sd1",
+      "top": -33.33,
+      "left": 14.67,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-ili9341", "id": "lcd1", "top": -243.16, "left": 121.66, "attrs": {} }
+  ],
+  "connections": [
+    [ "sd1:SCK", "uno:13", "green", [ "v18", "h-31" ] ],
+    [ "sd1:GND", "uno:GND.1", "black", [ "v21", "h-48" ] ],
+    [ "sd1:DO", "uno:12", "green", [ "v24", "h-42" ] ],
+    [ "sd1:DI", "uno:11", "green", [ "v14", "h6" ] ],
+    [ "uno:5V", "sd1:VCC", "red", [ "v11", "h-89", "v-220", "h79" ] ],
+    [ "uno:10", "undefined:CS", "green", [ "v-18.54", "h144.4" ] ],
+    [ "uno:10", "undefined:CS", "green", [ "v-36.88", "h127.23" ] ],
+    [ "uno:10", "undefined:CS", "green", [ "v-38.69", "h142.9" ] ],
+    [ "uno:10", "lcd1:CS", "green", [ "v-27.24", "h107.94" ] ],
+    [ "uno:11", "lcd1:MOSI", "green", [ "v-36.28", "h161.45" ] ],
+    [ "uno:13", "lcd1:SCK", "green", [ "v-44.12", "h202.15" ] ],
+    [ "uno:GND.1", "lcd1:GND", "black", [ "v-52.56", "h151.97" ] ],
+    [ "sd1:VCC", "lcd1:VCC", "red", [ "v33.12", "h115.38" ] ],
+    [ "sd1:CS", "uno:4", "green", [ "v10.37", "h62.51" ] ],
+    [ "uno:9", "lcd1:RST", "green", [ "v-19.46", "h120.59" ] ],
+    [ "uno:8", "lcd1:D/C", "green", [ "v-13.98", "h123.73" ] ],
+    [ "lcd1:LED", "lcd1:VCC", "green", [ "v-21.71", "h-31.45" ] ]
+  ],
+  "dependencies": {}
+}

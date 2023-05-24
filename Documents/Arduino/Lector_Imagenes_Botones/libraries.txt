@@ -1,0 +1,5 @@
+SdFat - Adafruit Fork
+Adafruit GFX Library
+Adafruit ILI9341
+Adafruit SPIFlash
+Adafruit ImageReader Library
